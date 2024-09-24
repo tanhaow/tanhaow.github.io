@@ -1,6 +1,5 @@
 import { GiCalendar, GiClawSlashes, GiMailbox, GiMayanPyramid, GiPhone } from "react-icons/gi";
 import React from 'react';
-
 import rachelImage from '../assets/Rachel_Tan.jpg';
 
 

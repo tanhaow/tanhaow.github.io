@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
+import ThemeSwitcher from './ThemeSwitcher';
 
 const Navbar = () => {
 
@@ -26,6 +27,9 @@ const Navbar = () => {
           <NavLink to="/contact" className="navbar-link" data-nav-link>
             Contact
           </NavLink>
+        </li>
+        <li className="navbar-item">
+          <ThemeSwitcher />
         </li>
       </ul>
     </nav>

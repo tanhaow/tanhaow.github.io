@@ -97,6 +97,25 @@
 }
 
 
+/*-----------------------------------*\
+  # Theme switch button
+\*-----------------------------------*/
+
+body:not(.light-mode) .theme-switcher {
+  font-family: var(--ff-poppins);
+  background-color: transparent; /* No background color */
+  border: none; /* No border */
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+body:not(.light-mode) .theme-switcher img {
+  width: 24px; /* Adjust size as needed */
+  height: 24px; /* Adjust size as needed */
+}
+
+body:not(.light-mode) .theme-switcher:hover img {
+  filter: brightness(1.2); /* Light blue hover effect */
+}
 
 
 
@@ -1803,14 +1822,15 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 /* Dark mode styles for the filter button*/
-.dark-mode .filter-buttons {
+body:not(.light-mode) .filter-buttons {
   display: flex;
   gap: 15px;
   margin-bottom: 20px;
   justify-content: flex-start;
 }
 
-.dark-mode .filter-buttons button {
+body:not(.light-mode) .filter-buttons button {
+  padding: 5px 20px;
   background: none;
   border: none;
   font-size: 1.1em;
@@ -1819,11 +1839,15 @@ textarea.form-input::-webkit-resizer { display: none; }
   color: #ccc;
 }
 
-.dark-mode .filter-buttons button.active,
-.dark-mode .filter-buttons button:hover {
+body:not(.light-mode) .filter-bu
+ttons button.active,
+body:not(.light-mode) .filter-buttons button:hover {
   font-weight: bold;
-  color: #007bff;
+  color: #00bfff;
 }
+
+
+
 
 /* Styling for ThemeSwitcher */
 body:not(.light-mode) .theme-switcher {

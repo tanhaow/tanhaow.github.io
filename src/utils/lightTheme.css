@@ -137,6 +137,30 @@ html { font-family: var(--ff-poppins); }
 
 body { background: var(--smoky-black); }
 
+
+/*-----------------------------------*\
+  # Theme switch button
+\*-----------------------------------*/
+
+body.light-mode .theme-switcher {
+  font-family: var(--ff-poppins);
+  background-color: transparent; /* No background color */
+  border: none; /* No border */
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+body.light-mode .theme-switcher img {
+  width: 24px; /* Adjust size as needed */
+  height: 24px; /* Adjust size as needed */
+}
+
+body.light-mode .theme-switcher:hover img {
+  filter: brightness(0.8); /* Light blue hover effect */
+}
+
+
+
+
 /*-----------------------------------*\
   #REUSED STYLE
 \*-----------------------------------*/
@@ -1675,6 +1699,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 .light-mode .filter-buttons button {
+  padding: 5px 20px;
   background: none;
   border: none;
   font-size: 1.1em;
@@ -1686,8 +1711,16 @@ textarea.form-input::-webkit-resizer { display: none; }
 .light-mode .filter-buttons button.active,
 .light-mode .filter-buttons button:hover {
   font-weight: bold;
-  color: #007bff;
+  color: #00bfff;
 }
+
+
+
+
+
+
+
+
 
 /* Styling for ThemeSwitcher */
 body.light-mode .theme-switcher {
