@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import Service from "./Service";
 import pennEngineeringImage from '../../assets/penn-engineering.jpg';
-import pennEngineeringImage2 from '../../assets/penn-engineering2.jpeg';
 
 const servicesData = [
   {

@@ -253,6 +253,12 @@ article.active {
 .article-title {
   position: relative;
   padding-bottom: 7px;
+  color: var(--white-2);
+}
+
+/* Add specific dark mode styles */
+body:not(.light-mode) .article-title {
+  color: var(--white-2);
 }
 
 .article-title::after {

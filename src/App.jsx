@@ -2,6 +2,7 @@ import React from 'react';
 import { Outlet } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Aside from "./components/Aside";
+import './App.css';
 
 function App() {
   return (

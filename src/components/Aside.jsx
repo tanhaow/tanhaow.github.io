@@ -1,11 +1,21 @@
-import { GiCalendar, GiClawSlashes, GiMailbox, GiMayanPyramid, GiPhone } from "react-icons/gi";
-import React from 'react';
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaCalendar } from 'react-icons/fa';
+import React, { useState } from 'react';
 import rachelImage from '../assets/Rachel_Tan.jpg';
+
+import './Aside.css';
 
 
 const Aside = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
+  };
+
+
+
   return (
-    <aside className="sidebar" id="customSidebar">
+      <aside className={`sidebar ${isOpen ? 'active' : ''}`} id="customSidebar">
         <div className="sidebar-info">
           <figure className="avatar-box">
             <img
@@ -22,10 +32,8 @@ const Aside = () => {
             <p className="title">Software Engineer</p>
           </div>
 
-          <button className="info_more-btn" data-sidebar-btn>
-            <span>Show Contacts</span>
-
-            <GiClawSlashes />
+          <button className="info_more-btn" onClick={toggleSidebar}>
+            <span>{isOpen ? 'Hide Contacts' : 'Show Contacts'}</span>
           </button>
         </div>
 
@@ -35,7 +43,7 @@ const Aside = () => {
           <ul className="contacts-list">
             <li className="contact-item">
               <div className="icon-box">
-                <GiMailbox/>
+                <FaEnvelope />
               </div>
 
               <div className="contact-info">
@@ -49,7 +57,7 @@ const Aside = () => {
 
             <li className="contact-item">
               <div className="icon-box">
-                <GiPhone/>
+                <FaPhone/>
               </div>
 
               <div className="contact-info">
@@ -63,7 +71,7 @@ const Aside = () => {
 
             <li className="contact-item">
               <div className="icon-box">
-                <GiCalendar/>
+                <FaCalendar/>
               </div>
 
               <div className="contact-info">
@@ -75,7 +83,7 @@ const Aside = () => {
 
             <li className="contact-item">
               <div className="icon-box">
-                <GiMayanPyramid/>
+                <FaMapMarkerAlt/>
               </div>
 
               <div className="contact-info">
