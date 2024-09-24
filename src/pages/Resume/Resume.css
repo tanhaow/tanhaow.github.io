@@ -1,0 +1,105 @@
+.resume-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .resume-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .article-title {
+    margin: 0;
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the right */
+    gap: 1rem; /* Add space between buttons */
+    margin-bottom: 1rem;
+  }
+  
+  .linkedin-btn,
+  .download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.8rem;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .linkedin-btn {
+    background-color: #0187cf;
+  }
+  
+  .linkedin-btn:hover {
+    background-color: #0076b2;
+  }
+  
+  .download-btn {
+    background-color: #AFC8AD;
+    color: #333; /* Changed to dark color for better contrast */
+  }
+  
+  .download-btn:hover {
+    background-color: #88AB8E;
+  }
+  
+  .resume-container {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .resume-content {
+    padding: 1.5rem;
+  }
+  
+  .resume-content svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  @media (max-width: 768px) {
+    .resume-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+  
+    .button-container {
+      flex-direction: column;
+      align-items: flex-end; /* Align buttons to the right on mobile */
+      gap: 0.5rem;
+      width: 100%;
+    }
+  
+    .resume-container {
+      margin-top: 0.5rem;
+    }
+  
+    .resume-content {
+      padding: 1rem;
+    }
+  
+    .linkedin-btn,
+    .download-btn {
+      width: auto; /* Allow buttons to shrink on mobile */
+      justify-content: center;
+    }
+  }

@@ -5,53 +5,61 @@
   /**
    * colors
    */
+  
 
   /* gradient */
 
   --bg-gradient-onyx: linear-gradient(
     to bottom right, 
-    hsl(240, 1%, 95%) 3%, 
-    hsl(0, 0%, 100%) 97%
-  );
+    hsl(0, 0%, 100%) 3%,
+    hsl(0, 0%, 98%) 97%
+  ); /* Main background gradient */
+
   --bg-gradient-jet: linear-gradient(
     to bottom right, 
-    hsla(240, 1%, 95%, 0.251) 0%, 
-    hsla(240, 2%, 100%, 0) 100%
-  ), hsl(240, 2%, 97%);
+    hsla(0, 0%, 100%, 0.251) 0%,
+    hsla(0, 0%, 98%, 0) 100%
+  ), hsl(0, 0%, 100%); /* Secondary background gradient */
+
   --bg-gradient-yellow-1: linear-gradient(
     to bottom right, 
-    hsl(45, 100%, 71%) 0%, 
-    hsla(36, 100%, 69%, 0) 50%
-  );
+    hsl(210, 100%, 70%) 0%,
+    hsla(210, 100%, 70%, 0) 50%
+  ); /* Accent gradient 1 */
+
   --bg-gradient-yellow-2: linear-gradient(
     135deg, 
-    hsla(45, 100%, 71%, 0.251) 0%, 
-    hsla(35, 100%, 68%, 0) 59.86%
-  ), hsl(240, 2%, 97%);
+    hsla(210, 100%, 70%, 0.251) 0%,
+    hsla(210, 100%, 70%, 0) 59.86%
+  ), hsl(0, 0%, 100%); /* Accent gradient 2 */
+
   --border-gradient-onyx: linear-gradient(
     to bottom right, 
-    hsl(0, 0%, 85%) 0%, 
-    hsla(0, 0%, 85%, 0) 50%
-  );
+    hsl(0, 0%, 90%) 0%,
+    hsla(0, 0%, 90%, 0) 50%
+  ); /* Border gradient */
+
   --text-gradient-yellow: linear-gradient(
     to right, 
-    rgb(56 189 248)
-  );
+    rgb(56, 189, 248)
+  ); /* Text accent gradient */
+
 
   /* solid */
 
-  --jet: hsl(0, 0%, 90%);
-  --onyx: hsl(240, 1%, 97%);
-  --eerie-black-1: hsl(240, 2%, 90%);
-  --eerie-black-2: rgb(245, 245, 245);
-  --smoky-black: rgb(250, 250, 250);
-  --white-1: hsl(0, 0%, 10%);
-  --white-2: hsl(0, 0%, 15%);
-  --orange-yellow-crayola: rgb(56 189 248);
-  --vegas-gold: hsl(45, 54%, 58%);
-  --light-gray: hsl(0, 0%, 20%);
-  --light-gray-70: hsla(0, 0%, 20%, 0.7);
-  --bittersweet-shimmer: hsl(15, 100%, 50%);
+  --jet: rgb(234, 219, 200); /* Border line color */
+  --onyx: rgb(175, 200, 173); /* Career role button */
+  --eerie-black-1: rgb(242, 241, 235); /* Left bottom small icons background */
+  --eerie-black-2: rgb(241, 241, 241); /* Section box color */
+  --smoky-black: rgb(234, 219, 200); /* Background color */
+  --white-1: hsl(0, 0%, 10%); /* Main text color */
+  --white-2: hsl(0, 0%, 20%); /* Secondary text color */
+  --orange-yellow-crayola: rgb(56, 189, 248); /* Accent color (blue) */
+  --vegas-gold: hsl(210, 100%, 50%); /* Secondary accent color (darker blue) */
+  --light-gray: hsl(0, 0%, 30%); /* Tertiary text color */
+  --light-gray-70: hsla(0, 0%, 30%, 0.3); /* Faded text color */
+  --bittersweet-shimmer: hsl(210, 100%, 60%); /* Error/warning color (lighter blue) */
+
 
   /**
    * typography
@@ -157,7 +165,6 @@ body.light-mode .theme-switcher img {
 body.light-mode .theme-switcher:hover img {
   filter: brightness(0.8); /* Light blue hover effect */
 }
-
 
 
 
