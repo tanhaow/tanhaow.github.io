@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 
 
 const Contact = () => {
