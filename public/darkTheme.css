@@ -507,6 +507,23 @@ main {
 .navbar-link.active { color: var(--orange-yellow-crayola); }
 
 
+@media (max-width: 450px) {
+  /* Adjust the navbar style for mobile */
+  .navbar {
+    padding: 10px; /* Reduce padding for better spacing on small screens */
+    border-radius: 10px 10px 0 0;
+  }
+
+  .navbar-list {
+    gap: 10px; /* Reduce gap between navbar items */
+  }
+
+  .navbar-link {
+    font-size: 14px; /* Increase font size for better readability */
+    padding: 12px 5px; /* Adjust padding to make it larger on mobile */
+  }
+}
+
 
 
 
