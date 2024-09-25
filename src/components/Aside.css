@@ -1,98 +1,123 @@
+/* Sidebar base styles */
 .sidebar {
-  width: 100%;
-  transition: max-height 0.3s ease-in-out;
-}
-
-.sidebar-info_more {
-  opacity: 1;
-  visibility: visible;
-  transition: var(--transition-2);
-}
-
-.info_more-btn {
-  display: none;
-}
-
-
-/* mobile styles */
-@media (max-width: 1023px) {
-.sidebar {
-    max-height: 120px;
-    overflow: hidden;
-    position: relative;
-    padding-bottom: 40px;
+    width: 100%; /* Full width by default */
+    min-height: 160px;
+    transition: max-height 0.3s ease-in-out; /* Smooth transition for height changes */
+  }
+  
+  /* Sidebar additional info section */
+  .sidebar-info_more {
+    opacity: 1; /* Fully visible by default */
+    visibility: visible; /* Ensure it's visible */
+    transition: var(--transition-2); /* Uses a predefined transition for smooth appearance */
+  }
+  
+  .info_more-btn {
+    display: none; /* Hidden by default, only shown on mobile */
+    transition: background 0.3s ease; /* Smooth transition for background */
+  }
+  
+  /* Styles for mobile and tablet layouts (screen width 1023px and below) */
+  @media (max-width: 1023px) {
+    
+    .sidebar {
+      max-height: 120px; /* Restrict the height initially for mobile */
+      overflow: hidden; /* Hide overflow for compact layout */
+      position: relative; /* Position relative for absolute positioning of button */
+      padding-bottom: 40px; /* Add some space at the bottom */
+    }
+  
+    .sidebar.active {
+      max-height: 100vh; /* Full screen height when active (opened) */
+    }
+  
+    /* Hide the additional info by default */
+    .sidebar-info_more {
+      opacity: 0; /* Invisible */
+      visibility: hidden; /* Hidden from the layout */
+    }
+  
+    /* Show additional info when the sidebar is active */
+    .sidebar.active .sidebar-info_more {
+      opacity: 1; /* Make it visible */
+      visibility: visible; /* Reveal it in the layout */
+    }
+  
+    /* Show the toggle button for revealing more info */
+    .info_more-btn {
+      display: block; /* Make the button visible */
+      position: absolute; /* Positioned relative to the sidebar */
+      top: -15px; /* Offset above the sidebar */
+      right: -15px; /* Positioned to the right */
+      border-radius: 0 15px; /* Rounded corner for better UI */
+      font-size: 13px; /* Small font for mobile */
+      color: var(--orange-yellow-crayola); /* Button text color */
+      background: var(--border-gradient-onyx); /* Background gradient */
+      padding: 10px; /* Spacing inside the button */
+      box-shadow: var(--shadow-2); /* Adds a subtle shadow */
+      transition: var(--transition-1); /* Smooth transitions */
+      z-index: 1; /* Ensures the button stays on top */
+    }
+  
+    .info_more-btn::before {
+      content: ""; /* Empty content for pseudo-element */
+      position: absolute; /* Positioned relative to the button */
+      inset: 1px; /* Slight inset for the background */
+      border-radius: inherit; /* Inherits the button's border-radius */
+      background: var(--bg-gradient-jet); /* Background color for the hover effect */
+      transition: var(--transition-1); /* Smooth transition */
+      z-index: -1; /* Stays behind the button */
+    }
+  
+    /* Hover effect for the button */
+    .info_more-btn:hover,
+    .info_more-btn:focus { 
+      background: var(--bg-gradient-yellow-1); /* Change background on hover */
+    }
+  
+    /* Hover effect for the button's pseudo-element */
+    .info_more-btn:hover::before,
+    .info_more-btn:focus::before { 
+      background: var(--bg-gradient-yellow-2); /* Change pseudo-element background */
     }
 
-  .sidebar.active {
-    max-height: 100vh;
-  }
+    /* Reset hover effect when sidebar is not active */
+    .sidebar:not(.active) .info_more-btn {
+        background: var(--border-gradient-onyx); /* Reset to default */
+    }
 
-  .sidebar-info_more {
-    opacity: 0;
-    visibility: hidden;
+    /* Reset the pseudo-element background when sidebar is not active */
+    .sidebar:not(.active) .info_more-btn::before {
+        background: var(--bg-gradient-jet); /* Reset to default for pseudo-element */
+    }
+    
+    .info_more-btn span { 
+      display: inline; /* Ensure the span inside the button is displayed */
+    }
   }
-
-  .sidebar.active .sidebar-info_more {
-    opacity: 1;
-    visibility: visible;
+  
+  /* Styles for larger screens (screen width 1024px and above) */
+  @media (min-width: 1024px) {
+  
+    .sidebar {
+      max-height: none; /* No height restriction on desktop */
+      overflow: visible; /* Ensure the entire sidebar content is visible */
+    }
+  
+    /* Ensure additional info is always visible on larger screens */
+    .sidebar-info_more {
+      opacity: 1; /* Fully visible */
+      visibility: visible; /* No visibility restrictions */
+    }
+  
+    /* Hide the toggle button on larger screens since it's not needed */
+    .info_more-btn {
+      display: none;
+    }
+  
+    /* For contact links (e.g., email addresses), ensure long text wraps properly */
+    .contact-link {
+      word-break: break-all; /* Prevents overflow by breaking long words */
+    }
   }
-
-  .info_more-btn {
-    display: block;
-    position: absolute;
-    top: -15px;
-    right: -15px;
-    border-radius: 0 15px;
-    font-size: 13px;
-    color: var(--orange-yellow-crayola);
-    background: var(--border-gradient-onyx);
-    padding: 10px;
-    box-shadow: var(--shadow-2);
-    transition: var(--transition-1);
-    z-index: 1;
-  }
-
-  .info_more-btn::before {
-    content: "";
-    position: absolute;
-    inset: 1px;
-    border-radius: inherit;
-    background: var(--bg-gradient-jet);
-    transition: var(--transition-1);
-    z-index: -1;
-  }
-
-  .info_more-btn:hover,
-  .info_more-btn:focus { 
-    background: var(--bg-gradient-yellow-1); 
-  }
-
-  .info_more-btn:hover::before,
-  .info_more-btn:focus::before { 
-    background: var(--bg-gradient-yellow-2); 
-  }
-
-  .info_more-btn span { 
-    display: inline; 
-  }
-}
-
-@media (min-width: 1024px) {
-  .sidebar {
-    max-height: none;
-    overflow: visible;
-  }
-
-  .sidebar-info_more {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .info_more-btn {
-    display: none;
-  }
-
-  .contact-link {
-    word-break: break-all; /* Ensures long email addresses wrap */
-  }
-}
+  

@@ -1,10 +1,11 @@
 :root {
 
   /**
-   * colors
+   * SET COLORS
    */
 
-  /* gradient */
+
+  /* gradient color */
 
   --bg-gradient-onyx: linear-gradient(
     to bottom right, 
@@ -36,23 +37,21 @@
     rgb(56 189 248)
   );
 
-  /* solid */
+  /* solid color */
 
   --jet: hsl(0, 0%, 22%);
   --onyx: hsl(240, 1%, 17%);
   --eerie-black-1: hsl(240, 2%, 13%);
-  /* --eerie-black-2: hsl(240, 2%, 12%); */
   --eerie-black-2: rgb(11 17 32);
-  /* --smoky-black: hsl(0, 0%, 7%); */
   --smoky-black: rgb(15 23 42);
   --white-1: hsl(0, 0%, 100%);
   --white-2: hsl(0, 0%, 98%);
-  /* --orange-yellow-crayola: hsl(45, 100%, 72%); */
   --orange-yellow-crayola: rgb(56 189 248);
   --vegas-gold: hsl(45, 54%, 58%);
   --light-gray: hsl(0, 0%, 84%);
   --light-gray-70: hsla(0, 0%, 84%, 0.7);
   --bittersweet-shimmer: hsl(15, 100%, 50%);
+
 
   /**
    * typography
@@ -95,6 +94,7 @@
   --transition-2: 0.5s ease-in-out;
 
 }
+
 
 
 /*-----------------------------------*\
@@ -324,14 +324,15 @@ main {
 }
 
 
+
+
 /*-----------------------------------*\
   #SIDEBAR
 \*-----------------------------------*/
 
 .sidebar {
   margin-bottom: 15px;
-  max-height: 112px;
-  overflow: hidden;
+  overflow-x: auto;
   transition: var(--transition-2);
   width: 350px; /* Increase the width */
 }
@@ -417,20 +418,21 @@ main {
 
 .contacts-list {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
+  grid-template-columns: 1fr; /* Single column for all items */
+  gap: 16px; /* Space between items */
 }
 
+
 .contact-item {
-  min-width: 100%;
   display: flex;
   align-items: center;
   gap: 16px;
 }
 
+
 .contact-info {
-  max-width: calc(100% - 46px);
-  width: calc(100% - 46px);
+  max-width: calc(100% - 50px);
+  width: calc(100% - 50px);
 }
 
 .contact-title {
@@ -461,9 +463,7 @@ main {
   font-size: 18px;
 }
 
-
 .social-item .social-link:hover { color: var(--light-gray); }
-
 
 
 
@@ -523,7 +523,16 @@ main {
   line-height: 1.6;
 }
 
-.about-text p { margin-bottom: 15px; }
+.about-text p { 
+  margin-bottom: 15px; 
+}
+
+.text {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  line-height: 1.6;
+}
 
 .about-image {
   width: 95%;
@@ -642,9 +651,6 @@ main {
 /**
  * #testimonials-modal
  */
-
-
-
 
 .overlay {
   position: fixed;
@@ -1845,12 +1851,12 @@ body:not(.light-mode) .filter-buttons button {
   color: #ccc;
 }
 
-body:not(.light-mode) .filter-bu
-ttons button.active,
+body:not(.light-mode) .filter-buttons button.active,
 body:not(.light-mode) .filter-buttons button:hover {
   font-weight: bold;
   color: #00bfff;
 }
+
 
 
 
@@ -1868,15 +1874,18 @@ body:not(.light-mode) .theme-switcher:hover {
   color: #00bfff; /* Light blue hover effect */
 }
 
-/* Styling for Sidebar */
+
 /* Common Styles */
+
+
+/* Styling for Sidebar */
 .sidebar {
-width: 300px; /* Increase the width */
-padding: 20px;
-background: var(--eerie-black-2); /* Ensure this matches your design */
-border-radius: 20px;
-box-shadow: var(--shadow-1);
-z-index: 1;
+  width: 300px; /* Increase the width */
+  padding: 20px;
+  background: var(--eerie-black-2); /* Ensure this matches your design */
+  border-radius: 20px;
+  box-shadow: var(--shadow-1);
+  z-index: 1;
 }
 
 .sidebar-info .avatar-box img {
@@ -1901,46 +1910,14 @@ padding: 3px 12px;
 border-radius: 8px;
 }
 
-.contacts-list .contact-info .contact-link {
-white-space: nowrap;
-overflow: hidden;
-text-overflow: ellipsis;
-display: inline-block;
-}
 
-.contacts-list .contact-info {
-max-width: calc(100% - 50px); /* Ensure there is enough space for icons */
-}
 
-/* Light Mode Styles */
-body.light-mode .sidebar {
-background: #f0f0f0;
-color: #333;
-}
-
-body.light-mode .info-content .name,
-body.light-mode .info-content .title {
-color: #333;
-}
-
-body.light-mode .contacts-list .contact-info .contact-link {
-color: #007bff;
-}
-
-/* Dark Mode Styles */
-body.dark-mode .sidebar {
-background: #1e1e2e;
-color: #fff;
-}
 
 body.dark-mode .info-content .name,
 body.dark-mode .info-content .title {
 color: #fff;
 }
 
-body.dark-mode .contacts-list .contact-info .contact-link {
-color: #4da6ff;
-}
 
 /* Stlying for About Page Skills */
 .skills-section {

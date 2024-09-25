@@ -5,7 +5,7 @@
   /**
    * colors
    */
-  
+
 
   /* gradient */
 
@@ -36,7 +36,7 @@
   --border-gradient-onyx: linear-gradient(
     to bottom right, 
     hsl(0, 0%, 90%) 0%,
-    hsla(0, 0%, 90%, 0) 50%
+    rgb(175, 200, 173) 50%
   ); /* Border gradient */
 
   --text-gradient-yellow: linear-gradient(
@@ -59,7 +59,8 @@
   --light-gray: hsl(0, 0%, 30%); /* Tertiary text color */
   --light-gray-70: hsla(0, 0%, 30%, 0.3); /* Faded text color */
   --bittersweet-shimmer: hsl(210, 100%, 60%); /* Error/warning color (lighter blue) */
-
+  --mid-green: rgb(175, 200, 173);
+  --dark-green: rgb(136, 171, 142);
 
   /**
    * typography
@@ -175,6 +176,7 @@ body.light-mode .theme-switcher:hover img {
 .sidebar,
 article {
   background: var(--eerie-black-2);
+  /* border: 1px solid var(--jet); */
   border-radius: 20px;
   padding: 15px;
   box-shadow: var(--shadow-1);
@@ -183,6 +185,7 @@ article {
 
 section{
   background: var(--eerie-black-2);
+  /* border: 1px solid var(--jet); */
   padding: 15px;
   border-radius: 20px;
 }
@@ -254,6 +257,12 @@ article.active {
 .article-title {
   position: relative;
   padding-bottom: 7px;
+  color: var(--white-2);
+}
+
+/* Add specific dark mode styles */
+body:not(.light-mode) .article-title {
+  color: var(--white-2);
 }
 
 .article-title::after {
@@ -304,6 +313,9 @@ article.active {
   z-index: -1;
 }
 
+
+
+
 /*-----------------------------------*\
   #MAIN
 \*-----------------------------------*/
@@ -314,16 +326,17 @@ main {
   min-width: 259px;
 }
 
+
 /*-----------------------------------*\
   #SIDEBAR
 \*-----------------------------------*/
 
 .sidebar {
   margin-bottom: 15px;
-  max-height: 112px;
-  overflow: hidden;
+  overflow-x: auto;
   transition: var(--transition-2);
   width: 350px; /* Increase the width */
+  
 }
 
 .sidebar.active { max-height: 405px; }
@@ -407,16 +420,17 @@ main {
 
 .contacts-list {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
+  grid-template-columns: 1fr; /* Single column for all items */
+  gap: 16px; /* Space between items */
 }
 
+
 .contact-item {
-  min-width: 100%;
   display: flex;
   align-items: center;
   gap: 16px;
 }
+
 
 .contact-info {
   max-width: calc(100% - 50px);
@@ -452,6 +466,8 @@ main {
 }
 
 .social-item .social-link:hover { color: var(--light-gray); }
+
+
 
 /*-----------------------------------*\
   #NAVBAR
@@ -491,6 +507,9 @@ main {
 
 .navbar-link.active { color: var(--orange-yellow-crayola); }
 
+
+
+
 /*-----------------------------------*\
   #ABOUT
 \*-----------------------------------*/
@@ -506,6 +525,13 @@ main {
 
 .about-text p { 
   margin-bottom: 15px; 
+}
+
+.text {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  line-height: 1.6;
 }
 
 .about-image {
@@ -1071,13 +1097,13 @@ textarea.form-input::-webkit-resizer { display: none; }
   position: relative;
   width: 100%;
   background: var(--border-gradient-onyx);
-  color: var(--orange-yellow-crayola);
+  color: var(--light-gray);
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-  padding: 13px 20px;
-  border-radius: 14px;
+  gap: 0px;
+  padding: 0px 0px;
+  border-radius: 20px;
   font-size: var(--fs-6);
   text-transform: capitalize;
   box-shadow: var (--shadow-3);
@@ -1089,7 +1115,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   content: "";
   position: absolute;
   inset: 1px;
-  background: var(--bg-gradient-jet);
+  background: var(--onyx);
   border-radius: inherit;
   z-index: -1;
   transition: var(--transition-1);
@@ -1097,9 +1123,9 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 .form-btn ion-icon { font-size: 16px; }
 
-.form-btn:hover { background: var(--bg-gradient-yellow-1); }
+.form-btn:hover { background: var(--light-gray); }
 
-.form-btn:hover::before { background: var(--bg-gradient-yellow-2); }
+.form-btn:hover::before { background: var(--mid-green); }
 
 .form-btn:disabled {
   opacity: 0.7;
@@ -1118,7 +1144,7 @@ textarea.form-input::-webkit-resizer { display: none; }
  * responsive larger than 450px screen
  */
 
-@media (min-width: 450px) {
+ @media (min-width: 450px) {
 
   /**
    * client
@@ -1126,13 +1152,20 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .clients-item { min-width: calc(33.33% - 10px); }
 
+
+
   /**
    * #PORTFOLIO, BLOG 
    */
 
   .project-img,
   .blog-banner-box { height: auto; }
+
 }
+
+
+
+
 
 /**
  * responsive larger than 580px screen
@@ -1255,6 +1288,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   .about .article-title { margin-bottom: 20px; }
 
   .about-text { margin-bottom: 40px; }
+
 
   /* service */
 
@@ -1617,11 +1651,13 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   article { min-height: 100%; }
 
+
+
   /**
    * MAIN
    */
 
-  main {
+   main {
     max-width: 1200px;
     margin-inline: auto;
     display: flex;
@@ -1636,6 +1672,8 @@ textarea.form-input::-webkit-resizer { display: none; }
     margin: 0;
   }
 
+
+
   /**
    * SIDEBAR
    */
@@ -1648,7 +1686,6 @@ textarea.form-input::-webkit-resizer { display: none; }
     margin-bottom: 0;
     padding-top: 60px;
     z-index: 1;
-    width: 350px; /* Increase the width */
   }
 
   .sidebar-info { flex-direction: column; }
@@ -1689,6 +1726,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .social-list { justify-content: center; }
 
+
   /**
      * RESUME
      */
@@ -1696,6 +1734,9 @@ textarea.form-input::-webkit-resizer { display: none; }
   .timeline-text { max-width: 700px; }
 
 }
+
+
+
 
 /* Light mode styles for the filter button */
 .light-mode .filter-buttons {
@@ -1726,9 +1767,6 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-
-
-
 /* Styling for ThemeSwitcher */
 body.light-mode .theme-switcher {
   font-family: var(--ff-poppins);
@@ -1742,9 +1780,51 @@ body.light-mode .theme-switcher:hover {
   color: #00bfff; /* Light blue hover effect */
 }
 
-#customSidebar {
-  width: 400px; /* Increase the width */
+
+
+
+
+/* Styling for Sidebar */
+.sidebar {
+  width: 300px; /* Increase the width */
+  padding: 20px;
+  background: var(--eerie-black-2); /* Ensure this matches your design */
+  border-radius: 20px;
+  box-shadow: var(--shadow-1);
+  z-index: 1;
 }
+
+.sidebar-info .avatar-box img {
+border-radius: 20px;
+}
+
+.info-content .name {
+color: var(--white-2);
+font-size: var(--fs-3);
+font-weight: var(--fw-500);
+letter-spacing: -0.25px;
+margin-bottom: 10px;
+}
+
+.info-content .title {
+color: var(--white-1);
+background: var(--onyx);
+font-size: var(--fs-8);
+font-weight: var(--fw-300);
+width: max-content;
+padding: 3px 12px;
+border-radius: 8px;
+}
+
+
+
+
+body.dark-mode .info-content .name,
+body.dark-mode .info-content .title {
+color: #fff;
+}
+
+
 
 /* Stlying for About Page Skills */
 .skills-section {

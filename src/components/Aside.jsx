@@ -40,63 +40,44 @@ const Aside = () => {
         <div className="sidebar-info_more">
           <div className="separator"></div>
 
+
           <ul className="contacts-list">
             <li className="contact-item">
-              <div className="icon-box">
-                <FaEnvelope />
-              </div>
-
+              <div className="icon-box"><FaEnvelope /></div>
               <div className="contact-info">
                 <p className="contact-title">Email</p>
-
-                <a href="mailto:tanhaosmail@gmail.com" className="contact-link">
-                  tanhaosmail@gmail.com
-                </a>
+                <a href="mailto:tanhaosmail@gmail.com" className="contact-link">tanhaosmail@gmail.com</a>
               </div>
             </li>
 
             <li className="contact-item">
-              <div className="icon-box">
-                <FaPhone/>
-              </div>
-
+              <div className="icon-box"><FaPhone/></div>
               <div className="contact-info">
                 <p className="contact-title">Phone</p>
-
-                <a href="tel:+14452607227" className="contact-link">
-                  +1 (445) 260-7227
-                </a>
+                <a href="tel:+14452607227" className="contact-link">+1 (445) 260-7227</a>
               </div>
             </li>
 
             <li className="contact-item">
-              <div className="icon-box">
-                <FaCalendar/>
-              </div>
-
+              <div className="icon-box"><FaCalendar/></div>
               <div className="contact-info">
                 <p className="contact-title">Birthday</p>
-
                 <time dateTime="2000-07-11">Jan 3, 2000</time>
               </div>
             </li>
 
             <li className="contact-item">
-              <div className="icon-box">
-                <FaMapMarkerAlt/>
-              </div>
-
+              <div className="icon-box"><FaMapMarkerAlt/></div>
               <div className="contact-info">
                 <p className="contact-title">Location</p>
-
-                <address>Philadelphia, Pennsylvania, USA</address>
+                <address>Philadelphia, PA, USA</address>
               </div>
             </li>
           </ul>
 
           <div className="separator"></div>
 
-          <ul className="social-list">
+          {/* <ul className="social-list">
             <li className="social-item">
               <a href="#" className="social-link">
                 <ion-icon name="logo-facebook"></ion-icon>
@@ -114,7 +95,8 @@ const Aside = () => {
                 <ion-icon name="logo-instagram"></ion-icon>
               </a>
             </li>
-          </ul>
+          </ul> */}
+
         </div>
       </aside>
   )

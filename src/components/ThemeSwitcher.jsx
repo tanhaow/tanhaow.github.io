@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import lightIcon from '../../src/assets/light-mode-icon.svg';
 import darkIcon from '../../src/assets/dark-mode-icon.svg';
 
+
 import './ThemeSwitcher.css';
 
 const ThemeSwitcher = () => {
@@ -13,12 +14,16 @@ const ThemeSwitcher = () => {
 
   useEffect(() => {
     const themeLink = document.getElementById('theme-link');
-    if (theme === 'dark') {
-      themeLink.href = '../../src/utils/darkTheme.css';
-      document.body.classList.remove('light-mode');
+    if (themeLink) {
+      if (theme === 'dark') {
+        themeLink.href = '../../src/utils/darkTheme.css'; // Use string path
+        document.body.classList.remove('light-mode');
+      } else {
+        themeLink.href = '../../src/utils/lightTheme.css'; // Use string path
+        document.body.classList.add('light-mode');
+      }
     } else {
-      themeLink.href = '../../src/utils/lightTheme.css';
-      document.body.classList.add('light-mode');
+      console.error("Theme link element not found");
     }
   }, [theme]);
 
