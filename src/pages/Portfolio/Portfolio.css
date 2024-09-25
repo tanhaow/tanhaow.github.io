@@ -105,3 +105,17 @@ body.light-mode .pagination .page-item.active .page-link {
   color: #fff;
   border-color: #007bff;
 }
+
+
+/* Adjustments for mobile display */
+@media (max-width: 450px) {
+  .projects-list {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 10px; /* Space between items */
+  }
+
+  .project-item {
+    width: 100%; /* Ensure each project takes full width */
+  }
+}

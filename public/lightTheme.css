@@ -798,6 +798,23 @@ main {
   #PORTFOLIO
 \*-----------------------------------*/
 
+@media (max-width: 450px) {
+  .projects-display {
+    padding: 10px; /* Add padding for better spacing */
+  }
+
+  .projects-list {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 10px; /* Space between items */
+  }
+
+  .project-item {
+    width: 100%; /* Ensure each project takes full width */
+    box-shadow: none; /* Remove shadows for a cleaner look */
+  }
+}
+
 .filter-list { display: none; }
 
 .filter-select-box {
@@ -1738,6 +1755,12 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
+
+
+/*-----------------------------------*\
+  #FILTER BUTTONS
+\*-----------------------------------*/
+
 /* Light mode styles for the filter button */
 .light-mode .filter-buttons {
   display: flex;
@@ -1762,6 +1785,11 @@ textarea.form-input::-webkit-resizer { display: none; }
   color: #00bfff;
 }
 
+@media (max-width: 450px) {
+  .light-mode .filter-buttons {
+    display: none; /* Hide filter buttons on mobile */
+  }
+}
 
 
 
