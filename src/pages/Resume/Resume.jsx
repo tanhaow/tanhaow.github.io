@@ -6,20 +6,20 @@ const Resume = () => {
   const [svgContent, setSvgContent] = useState('');
 
   useEffect(() => {
-    fetch('../../src/assets/my_resume/Rachel_Tan_Resume.svg')
+    fetch('./Rachel_Tan_Resume.svg')
       .then(response => response.text())
       .then(data => setSvgContent(data))
       .catch(error => console.error('Error fetching resume SVG:', error));
   }, []);
 
   const handleDownload = () => {
-    const pdfUrl = '../../src/assets/my_resume/Rachel_Tan_Resume.pdf';
+    const pdfUrl = './Rachel_Tan_Resume.pdf';
     window.open(pdfUrl, '_blank');
   };
 
   const handleLinkedIn = () => {
     // Replace with your actual LinkedIn profile URL
-    window.open('https://www.linkedin.com/in/your-profile', '_blank');
+    window.open('https://www.linkedin.com/in/tan-hao', '_blank');
   };
 
   return (

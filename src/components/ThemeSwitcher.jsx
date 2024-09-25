@@ -16,10 +16,10 @@ const ThemeSwitcher = () => {
     const themeLink = document.getElementById('theme-link');
     if (themeLink) {
       if (theme === 'dark') {
-        themeLink.href = '../../src/utils/darkTheme.css'; // Use string path
+        themeLink.href = '/darkTheme.css'; // Use string path
         document.body.classList.remove('light-mode');
       } else {
-        themeLink.href = '../../src/utils/lightTheme.css'; // Use string path
+        themeLink.href = '/lightTheme.css'; // Use string path
         document.body.classList.add('light-mode');
       }
     } else {
