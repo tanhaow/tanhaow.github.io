@@ -6,7 +6,7 @@
 ✨ Feel free to explore my projects and reach out!
 
 
-🦉 Step through the magic portal: [**Rachel Tan's Portfolio**](https://rachel-tanhao.github.io/portfolio) 
+🦉 Step through the magic portal: [**Rachel Tan's Portfolio**](https://rachel-tanhao.github.io/) 
 
 
 ![Homepage](demo/homepage-lightmode.png)
