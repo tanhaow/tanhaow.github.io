@@ -13,11 +13,11 @@ const Navbar = () => {
             About
           </NavLink>
         </li>
-        {/* <li className="navbar-item">
+        <li className="navbar-item">
           <NavLink to="/resume" className="navbar-link" data-nav-link>
             Resume
           </NavLink>
-        </li> */}
+        </li>
         <li className="navbar-item">
           <NavLink to="/portfolio" className="navbar-link" data-nav-link>
             Portfolio
