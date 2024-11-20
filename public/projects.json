@@ -16,6 +16,16 @@
         "description": "A full-stack MERN (MongoDB, Express.js, React, and Node.js) application that generates stunning AI-driven images using OpenAI's DALL-E model.",
         "link": "https://github.com/rachel-tanhao/OpenAI-Image-Generation-App"
     },
+
+    {
+        "title": "AI Sensei-3D Japanese Tutor",
+        "category": "Full-Stack Development",
+        "date": "2024-9",
+        "image": "images/projects/AiSensei.jpg",
+        "description": "An immersive 3D Japanese language learning platform featuring real-time text-to-speech with animated virtual teachers and grammar breakdowns.",
+        "link": "https://github.com/rachel-tanhao/Ai-Sensei-Japanese-Tutor"
+    },
+
     {
         "title": "FindFlora",
         "category": "Java Projects",
