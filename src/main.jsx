@@ -6,6 +6,7 @@ import './index.css';
 import {
   createBrowserRouter,
   RouterProvider,
+  Navigate,
 } from "react-router-dom";
 import Portfolio from './pages/Portfolio/Portfolio.jsx';
 import Resume from './pages/Resume/Resume.jsx';
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
         element: <Contact />,
       }
     ]
+  },
+  {
+    path: "/Ai-Sensei-Japanese-Tutor",
+    element: <Navigate to="https://ai-sensei-japanese-tutor-u27615.vm.elestio.app" replace />
   },
 ]);
 
