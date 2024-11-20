@@ -5,4 +5,13 @@ export default defineConfig({
   plugins: [react()],
   assetsInclude: ['**/*.JPG'],
   // base: '/rachel-tanhao.github.io/',
+  server: {
+    proxy: {
+      '/Ai-Sensei-Japanese-Tutor': {
+        target: 'https://ai-sensei-japanese-tutor-u27615.vm.elestio.app',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/Ai-Sensei-Japanese-Tutor/, '')
+      }
+    }
+  }
 })
