@@ -5,7 +5,7 @@
         "date": "2023-10",
         "image": "images/projects/RaccoonTV.png",
         "description": "A full-stack Netflix clone, featuring user registration, profile customization, dynamic multimedia content feeds, and advanced search functionalities.",
-        "link": "https://github.com/rachel-tanhao/RaccoonTV-Movie-App"
+        "link": "https://github.com/tanhaow/RaccoonTV-Movie-App"
     },
 
     {
@@ -14,7 +14,7 @@
         "date": "2024-9",
         "image": "images/projects/AiSensei.jpg",
         "description": "An immersive 3D Japanese language learning platform featuring real-time text-to-speech with animated virtual teachers and grammar breakdowns.",
-        "link": "https://github.com/rachel-tanhao/Ai-Sensei-Japanese-Tutor"
+        "link": "https://github.com/tanhaow/Ai-Sensei-Japanese-Tutor"
     },
 
     {
@@ -23,7 +23,7 @@
         "date": "2023-09",
         "image": "images/projects/openai.png",
         "description": "A full-stack MERN (MongoDB, Express.js, React, Node.js) app that generates stunning AI-driven images using DALL-E model. (🥺 The loading may take a moment bcs I'm using the free Cloud plan)",
-        "link": "https://github.com/rachel-tanhao/OpenAI-Image-Generation-App"
+        "link": "https://github.com/tanhaow/OpenAI-Image-Generation-App"
     },
 
 
@@ -33,7 +33,7 @@
         "date": "2024-05",
         "image": "images/projects/FindFlora.jpg",
         "description": "A Java-based recommendation engine using machine learning techniques and QuadTree algorithms to offer personalized garden solutions.",
-        "link": "https://github.com/rachel-tanhao/FindFlora-GardenFlowerRecommender"
+        "link": "https://github.com/tanhaow/FindFlora-GardenFlowerRecommender"
     },
 
     {
@@ -51,6 +51,6 @@
         "date": "2024-02",
         "image": "images/projects/TimeToGoal2.jpg",
         "description": "A time-tracking iOS app that combines short-term task planning and long-term goal tracking to help users stay focused.",
-        "link": "https://github.com/rachel-tanhao/TimeToGoal-Time-Tracking-iOS-App"
+        "link": "https://github.com/tanhaow/TimeToGoal-Time-Tracking-iOS-App"
     }
 ]

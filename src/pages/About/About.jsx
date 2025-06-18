@@ -38,7 +38,7 @@ const About = () => {
       </header>
       <section className="about-text">
       <p>
-          👋 Hello and welcome! I'm <b>Rachel Tan</b>, a full-stack developer specializing in <b>software engineering</b> and <b>machine learning</b>. 
+          👋 Hello and welcome! I'm <b>Hao Tan</b>, a full-stack developer specializing in <b>software engineering</b> and <b>machine learning</b>. 
           I have hands-on experience in <b>full-stack development</b> and <b>AI integration</b>, building scalable solutions to boost enterprise performance. 🚀
       </p>
       <p>

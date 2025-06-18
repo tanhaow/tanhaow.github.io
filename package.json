@@ -1,9 +1,9 @@
 {
-  "name": "rachel-tanhao.github.io",
+  "name": "tanhaow.github.io",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://rachel-tanhao.github.io/",
+  "homepage": "https://tanhaow.github.io/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
