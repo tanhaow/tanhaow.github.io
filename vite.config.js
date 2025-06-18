@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   assetsInclude: ['**/*.JPG'],
-  // base: '/rachel-tanhao.github.io/',
+  // base: '/tanhaow.github.io/',
   server: {
     proxy: {
       '/Ai-Sensei-Japanese-Tutor': {

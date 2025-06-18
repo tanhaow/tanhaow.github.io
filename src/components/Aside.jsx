@@ -20,14 +20,14 @@ const Aside = () => {
           <figure className="avatar-box">
             <img
               src={rachelImage}
-              alt="Rachel Tan"
+              alt="Hao Tan"
               width="80"
             />
           </figure>
 
           <div className="info-content">
-            <h1 className="name" title="Rachel Tan">
-              Rachel Tan
+            <h1 className="name" title="Hao Tan">
+              Hao Tan
             </h1>
             <p className="title">Software Engineer</p>
           </div>
