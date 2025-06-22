@@ -37,22 +37,24 @@ const About = () => {
         <h2 className="h2 article-title">About me 😊</h2>
       </header>
       <section className="about-text">
-      <p>
+        <p>
           👋 Hello and welcome! I'm <b>Hao Tan</b>, a full-stack developer specializing in <b>software engineering</b> and <b>machine learning</b>. 
-          I have hands-on experience in <b>full-stack development</b> and <b>AI integration</b>, building scalable solutions to boost enterprise performance. 🚀
-      </p>
-      <p>
-          🎓 I'm currently pursuing my <b>Master's in Computer and Information Technology</b> at the <b>University of Pennsylvania</b>,
-          to deepen my expertise in databases, data structures, and software design. 👩🏻‍💻
-      </p>
-      <div className="about-image">
-        <img src={pennEngineeringImage} alt="Penn Engineering Banner" className="about-penn-image"/>
-      </div>
-      <p>
-          🎯 I'll be completing all my <a href="https://www.cis.upenn.edu/graduate/program-offerings/master-of-computer-and-information-technology/requirements/" target="_blank" rel="noopener noreferrer" style={{ display: 'inline', textDecoration: 'underline' }}>degree requirements</a> and graduating by <b>May 2025</b>. Right now, I'm actively seeking <b>Full-time New Grad opportunities</b>. 
-          So I built this website to showcase my portfolio and to connect with recruiters and other professionals. 
+          I have hands-on experience in <b>full-stack development</b> and <b>AI integration</b>, building scalable solutions to enhance enterprise performance. 🚀
+        </p>
+        <p>
+          🎓 I recently graduated from the <b>University of Pennsylvania</b> with dual master's degrees in <b>Computer and Information Technology</b> and <b>East Asian Languages and Civilizations</b>. My training combines technical expertise with a multilingual, cross-cultural perspective, grounded in databases, data structures, and software design.
+        </p>
+        <div className="about-image">
+          <img src={pennEngineeringImage} alt="Penn Engineering Banner" className="about-penn-image" />
+        </div>
+        <p>
+          👩🏻‍💻 I currently work as a Research Software Engineer at Princeton’s Center for Digital Humanities, where I collaborate with faculty to develop custom software that supports academic research.
+          I'm especially interested in expanding the digital humanities toolkit through emerging technologies like multimodal models and computer vision, and in exploring how large language models can be used for cultural memory, storytelling, and computational reading.
+        </p>
+        <p>
+          I created this website to showcase my portfolio and connect with researchers and professionals. 
           Feel free to explore my projects and reach out! 💼✨
-      </p>
+        </p>
       </section>
 
 
